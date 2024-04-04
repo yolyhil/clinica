@@ -1,6 +1,3 @@
-proceso de modificacion de funciones
-
-//https://github.com/yolyhil/clinica
 let Npaciente= {}; 
 let paciente= {};
 const especialidades =["CLINICA", "OFTALMOLOGIA", "PEDIATRIA", "TRAUMATOLOGIA", "CIRUGIA GENERAL"];
@@ -65,27 +62,32 @@ function myTurnos(nombre) {
 
          /*const especialidad = especialidades.some((especialidad) => especialidad === prof_req);
          console.log(prof_req);
-         console.log(especialidad);*/
+         console.log(especialidad);  esta no corre funcion*/
          let especialidad = especialidades.indexOf(prof_req);
          console.log(especialidad);
 
-         while (especialidad != -1) {
+         while (especialidad != -1) {//con este ciclo verifico que la especialidad requerida esta y recien cargo los datos del paciente
             Npaciente.especiali= prof_req;
             Npaciente.nomApell= prompt(" ingrese su nombre completo");
             Npaciente.dni=parseInt( prompt("ingrese su DNI sin puntos ni comas"));
             Npaciente.edad= parseInt( prompt(" ingrese su EDAD"));
             Npaciente.genero= (prompt("ingrese su genero M si es hombre o F si es mujer")); 
             Npaciente.telefono= parseInt( prompt("ingrese por favor su numero de telefono"));  
-            alert("creamos su historia clinica, si tiene o tuvo patologias le pedimos que ingrese una por una");
+            alert("crearemos su historia clinica, si tiene o tuvo patologias le pedimos que ingrese una por una");
+            alert("por ejemplo la forma de ingreso seria -- gripe A hace 5 años");
+            let resp_enfer=prompt("padece alguna enfermedad o tuvo alguna enfermedad ? Si o No");
             do {
-                  let resp_enfer= prompt("padece alguna enfermedad o tuvo alguna enfermedad ? Si o No");
-                  if(resp_enfer=="si") {
-                     his_clinica= prompt("cual enfermedad tiene o tuvo ");
-                     respuesta="true";
+                  /*let resp_enfer= prompt("ingrese la enfermedad o patologia por favor");*/
+                  if(resp_enfer==="si") {
+                     his_clinica= his_clinica.unshift(prompt("ingrese la enfermedad o patologia por favor "));
+                     resp_enfer= prompt("ingresa otra enfermedad o patologia si o no");
+                     if(resp_enfer=="si") {
+                        respuesta="true";
+                     }
                   } else {
                      respuesta="false";
                   }   
-               } while (respuesta==true);
+               } while (respuesta === true);
 
             alert("usted "+ Npaciente.nomApell+ " fue registrado ");
       }
@@ -108,6 +110,12 @@ function myTurnos(nombre) {
     nuePaciente(nombre);
  }
 
+ 
+ 
+ 
+
+
+ 
  
  
  
