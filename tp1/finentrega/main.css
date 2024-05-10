@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+
+    .btn {
+        border: 0;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        background-color: rgb(192, 243, 255);
+    
+        &:hover {
+            background-color: #a4a5d9;
+        }
+    }
+}
+
+/****** Dark Mode ******/
+
+body {
+    transition: background-color .3s, color .3s;
+}
+
+body.dark-mode {
+    background-color:black;
+    color: white;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #49d5ee;
+} 
+.logo {
+    max-width: 5rem;
+   
+}
+img {
+    width: auto;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    /*margin:0 auto;
+   /* position: center;*/
+   gap:1rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap:1rem;
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.nav-menu-item {
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}  
+
+.nav-menu-link {
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color:#034574;
+    transition: 0.5s;
+} 
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+main {
+    background-color: aliceblue;
+}
+ h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    text-align: center;
+ }
+
+ 
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-menu-link nav-link {
+        color: #ecececec;
+    }
+} 
+
+/*https://github.com/yolyhil/clinica/tree/main/tp1/tercer_entrega*/
+
+
+/*https://github.com/yolyhil/clinica/tree/main/tp1/segunda_entrega */
