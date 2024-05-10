@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>turno</title>
+	<link rel="stylesheet" href="../css/mains.css">
+
+</head>
+<body>
+    <header>
+        <a href="../index.html">C.M.CENTRAL </a>
+           <h1>SU SALUD NUESTRO PRIORIDAD</h1>
+    </header>
+	<main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: paciente -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="paciente" class="formulario__label">Paciente</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="paciente" id="usuario" placeholder="john123">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener  letras</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre_completo" class="formulario__label">Nombre_Completo</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre_completo" id="nombre" placeholder="John Doe">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 30 dígitos y solo puede contener  letras </p>
+			</div>
+
+			<!-- Grupo: Especialidad -->
+			<div class="formulario__grupo" id="grupo__especialidad">
+				<label for="Especialidad" class="formulario__label">Especialidad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="especialidad" id="especialidad">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La especialidad debe ser de 4 a 20 dígitos.</p>
+			</div>
+
+			<!-- Grupo: DNI -->
+			<div class="formulario__grupo" id="grupo__dni">
+				<label for="dni" class="formulario__label">NumeroDNI</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="dni" id="dni">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"> deben ser de 8 como min y max 10.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
